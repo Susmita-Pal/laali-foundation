@@ -1,0 +1,61 @@
+{% block content %}
+    {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="overlay">
+        <div style="display: flex">
+            <div class="container">
+            <form action="" method="post">
+                {% csrf_token %}
+                    <input type="text" placeholder=" username" name="uname"><br>
+                    <input type="password" placeholder="password" name="pwd"><br><br>
+                    <input type="submit" class="sub" style="color:white" value="Login">
+            </form>
+             </div>
+    
+
+   
+            <div class="container0">
+            <form action="" method="post">
+                {% csrf_token %}
+                    <input type="text" placeholder=" उपयोगकर्ता नाम" name="uname"><br>
+                    <input type="password" placeholder="पासवर्ड" name="pwd"><br><br>
+                    <input type="submit" class="sub" style="color:white" value="लॉग इन करें">
+            </form>
+            </div>
+    
+    <div class="container1">
+        <form action="" method="post">
+            {% csrf_token %}
+          
+                <input type="text" placeholder="  Phone Number" name="uname"><br>
+                <input type="password" placeholder=" OTP" name="pwd"><br><br>
+                <input type="submit" class="sub" style="color:white" value="Login">
+        </form>
+    </div>
+        </div>
+
+    <script type="text/javascript">
+        (function (d, m) {
+            var kommunicateSettings =
+                { "appId": "11e877b23d966a22d621e9ac4f3d75519", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>
+    </div>
+</body>
+
+</html>
+{% endblock %}

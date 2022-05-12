@@ -1,0 +1,22 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Page</title>
+</head>
+<body>
+ <form method="post" action="">
+        {% csrf_token %}
+        <input type="text" placeholder="Title" name="title">
+        <br><input type="text" placeholder="Link" name="link">
+     <br><input type="date" placeholder="Date of the session" name="date">
+     <br><input type="text" placeholder="Time of session" name="time">
+     <br>
+    <input type="submit">
+ </form>
+
+</body>
+</html>
+
+{% endblock %}

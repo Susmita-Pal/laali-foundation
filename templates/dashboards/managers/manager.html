@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="{% static 'css/mentor_style.css' %}">
+    <title>Manager Dashboard</title>
+
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-default" style="background-color:pink;">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">Manager Dashboard</a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="profile/ad">Profile</a>
+                                </li>
+                                <li><a href="/">Logout</a>
+                                </li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+
+    <header>
+        <h1>Manager Dashboard</h1>
+    </header>
+
+    <div class="cards">
+        <div class="col">
+            <div class="card red">
+                <h1>Attendance</h1>
+                <h5>Create Attendance sessions & check student's Overall Attendance status</h5>
+                <a href="attendance/m">See More</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card red">
+                <h1>Session</h1>
+                <h5>Portal to Upload the links and other Details of Sessions </h5>
+                <a href="session/m">See More</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card red">
+                <h1>Teacher Work</h1>
+                <h5>Upload Assignments,Quizzes etc and collect the Submissions</h5>
+                <a href="Attendance.html">See More</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card red">
+                <h1>Mentor Forum</h1>
+                <h5>Tasks for Mentor, and other Details from Admins</h5>
+                <a href="Attendance.html">See More</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

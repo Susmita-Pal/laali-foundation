@@ -1,0 +1,324 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Laali</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FONT AWESOME CSS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- FLEXSLIDER CSS -->
+    <link href="{% static 'css/flexslider.css' %}" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <!-- Google	Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top " id="menu">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="logo-custom"
+                        src={% static 'img/logo.JPG' %}
+                        alt="" /></a>
+            </div>
+            <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user.is_authenticated %}
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#features-sec">FEATURES</a></li>
+                    <li><a href="#faculty-sec">FACULTY</a></li>
+                    <li><a href="#course-sec">COURSES</a></li>
+                    <li><a href="session">SESSION</a></li>
+                    <li><a href="accounts/logout">LOGOUT</a></li>
+                    {% else %}
+                    <li><a href="accounts/login">LOGIN</a></li>
+                    <li><a href="accounts/register">REGISTER</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--NAVBAR SECTION END-->
+    <div class="home-sec" id="home">
+        <div class="overlay">
+            <div class="container">
+                <div class="row text-center ">
+
+                    <div class="col-lg-12  col-md-12 col-sm-12">
+
+                        <div class="flexslider set-flexi" id="main-section">
+                            <ul class="slides move-me">
+                                <!-- Slider 01 -->
+                                <li>
+                                    <h2>The Laali Foundation</h2>
+                                    <h3>Corps of self-aware Leaders</h3>
+                                    <!-- <a  href="#features-sec" class="btn btn-info btn-lg" >
+                                GET AWESOME 
+                            </a>
+                             <a  href="#features-sec" class="btn btn-success btn-lg" >
+                                FEATURE LIST
+                            </a> -->
+                                </li>
+                                <!-- End Slider 01 -->
+
+                                <!-- Slider 02 -->
+                                <li>
+                                    <h2>The Laali Foundation</h2>
+                                    <h3>Raising awareness around Menstrual health and hygiene</h3>
+                                    <!-- <a  href="#features-sec" class="btn btn-primary btn-lg" >
+                               GET AWESOME 
+                            </a>
+                             <a  href="#features-sec" class="btn btn-danger btn-lg" >
+                                FEATURE LIST
+                            </a> -->
+                                </li>
+                                <!-- End Slider 02 -->
+
+                                <!-- Slider 03 -->
+                                <li>
+                                    <h2>The Laali Foundation</h2>
+                                    <h3>Taking initiatives to empower systemic change and transformation</h3>
+                                    <!-- <a  href="#features-sec" class="btn btn-default btn-lg" >
+                                GET AWESOME 
+                            </a>
+                             <a  href="#features-sec" class="btn btn-info btn-lg" >
+                                FEATURE LIST
+                            </a> -->
+                                </li>
+                                <!-- End Slider 03 -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--HOME SECTION END-->
+    <div class="tag-line">
+        <div class="container">
+            <div class="row  text-center">
+
+                <div class="col-lg-12  col-md-12 col-sm-12">
+
+                    <h2 data-scroll-reveal="enter from the bottom after 0.1s"><i class="fas fa-circle"></i> Welcome To
+                        The Laali Project <i class="fa fa-circle"></i> </h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--HOME SECTION TAG LINE END-->
+    <div id="features-sec" class="container set-pad">
+        <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <h1 data-scroll-reveal="enter from the bottom after 0.2s" class="header-line">The Laali Fellowship </h1>
+                <p data-scroll-reveal="enter from the bottom after 0.3s">
+                    An ecosystem for young change makers within the age group of 14-18 years
+                    from underprivileged backgrounds who would be trained to be period leaders
+                    whith our partner organization and mentors
+                </p>
+            </div>
+
+        </div>
+        <!--/.HEADER LINE END-->
+
+
+        <div class="row">
+            <div class="col-lg-6  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                <div class="about-div">
+                    <i class="fas fa-female fa-10x icon-round-border"></i>
+                    <h3>Menstrual Health Management Training</h3>
+                    <hr />
+                    <hr />
+
+                    <!-- <a href="#" class="btn btn-info btn-set"  >ASK THE EXPERT</a> -->
+                </div>
+            </div>
+            <div class="col-lg-6  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                <div class="about-div">
+                    <i class="fa fa-venus-mars fa-6x icon-round-border"></i>
+                    <h3>Gender Sensitization and sex education</h3>
+                    <hr />
+                    <hr />
+
+                    <!-- <a href="#" class="btn btn-info btn-set"  >ASK THE EXPERT</a> -->
+                </div>
+            </div>
+            <div class="col-lg-6  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                <div class="about-div">
+                    <i class="fas fa-users fa-6x icon-round-border"></i>
+                    <h3>Social emotional learning</h3>
+                    <hr />
+                    <hr />
+
+                    <!-- <a href="#" class="btn btn-info btn-set"  >ASK THE EXPERT</a> -->
+                </div>
+            </div>
+            <div class="col-lg-6  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                <div class="about-div">
+                    <i class="fas fa-briefcase fa-6x icon-round-border"></i>
+                    <h3>Entrepreneurial workshops</h3>
+                    <hr />
+                    <hr />
+                    <!-- <a href="#" class="btn btn-info btn-set"  >ASK THE EXPERT</a> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- FEATURES SECTION END-->
+    <div id="faculty-sec">
+        <div class="container set-pad">
+            <div class="row text-center">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                    <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line" ">ABOUT US </h1>
+                     <p data-scroll-reveal=" enter from the bottom after 0.3s">
+                        The Laali Foundation represents a Global, multi-stakeholder membership and partnership-based
+                        organization
+                        that works at the local, national, regional and global levels to build young change-makers to
+                        advance sexual
+                        and reproductive health, with a particular focus on poor, vulnerable and marginalized people, so
+                        that no one
+                        is left behind. Right to safe menstruation as a basic human right faces multilayered challenges
+                        and cannot be
+                        tackled alone by only creating Access or awareness.
+                        </p>
+                </div>
+            </div>
+            <!--/.HEADER LINE END-->
+
+            <div class="row">
+                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.4s">
+                    <div class="faculty-div">
+                        <img src="{% static 'img/faculty/1.jpg' %}" style="height: 190px; width:300px" class="img-rounded" />
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.5s">
+                    <div class="faculty-div">
+                        <img src="{% static 'img/faculty/2.jpg' %}" style="height: 190px; width:300px" class="img-rounded" />
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4" data-scroll-reveal="enter from the bottom after 0.6s">
+                    <div class="faculty-div">
+                        <img src="{% static 'img/faculty/3.jpg' %}" style="height: 190px; width:300px" class="img-rounded" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                <!-- <h1 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">ABOUT US </h1> -->
+                <h5 data-scroll-reveal="enter from the bottom after 0.3s">
+                    Laali has identified the 5AQ crisis that would create a systemic sustainable ecosystem of
+                    menstrual health and hygiene
+
+                </h5>
+                <h4 style="font-weight: 500;" data-scroll-reveal="enter from the bottom after 0.3s">Awareness,
+                    Acceptability, Availability, Affordability, Accessibility,
+                    and Quality.</h4>
+            </div>
+
+        </div>
+    </div>
+    <!-- Features SECTION END-->
+    <div id="contact-sec">
+        <div class="overlay">
+            <div class="container set-pad">
+                <div class="row text-center">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+                        <h2 data-scroll-reveal="enter from the bottom after 0.1s" class="header-line">CONTACT US </h2>
+
+                    </div>
+
+                </div>
+                <!--/.HEADER LINE END-->
+                <div class="row set-row-pad" data-scroll-reveal="enter from the bottom after 0.5s">
+
+
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control " required="required" placeholder="Your Name" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control " required="required" placeholder="Your Email" />
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" required="required" class="form-control"
+                                    style="min-height: 150px;" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info btn-block btn-lg">SUBMIT REQUEST</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row set-row-pad"  >
+<div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1 " data-scroll-reveal="enter from the bottom after 0.4s">
+
+               <h2 ><strong style="color:#c02b46">Our Location </strong></h2>
+   <hr />
+               <div  style="color:#e73052">
+                   <h4 >Pul Pehladpur Delhi,</h4>
+                   <h4>India,110044</h4>
+                   <h4><strong style="color:#e75b1a">Call:</strong>  + 0911145410 </h4>
+                 
+               </div>
+
+
+           </div>
+            <div class="col-lg-4 col-md-4 col-sm-4   col-lg-offset-1 col-md-offset-1 col-sm-offset-1" data-scroll-reveal="enter from the bottom after 0.4s">
+
+               <h2 ><strong style="color:#c02b46" >Social Conectivity </strong></h2>
+   <hr />
+               <div >
+               
+                <i class="fab fa-twitter fa-3x ficon"></i>
+                <i class="fab fa-facebook-f fa-3x ficon"></i>
+                <i class="fab fa-instagram fa-3x ficon"></i>
+                <i class="fas fa-envelope fa-3x ficon"></i>
+               </div>
+               </div>
+
+
+            </div>
+        </div>
+        <!-- CONTACT SECTION END-->
+        <div id="footer">
+            ©The Laali Project| All Rights Reserved
+        </div>
+        <!-- FOOTER SECTION END-->
+
+        <!--  Jquery Core Script -->
+        <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+        <!--  Core Bootstrap Script -->
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <!--  Flexslider Scripts -->
+        <script src="{% static 'js/jquery.flexslider.js' %}"></script>
+        <!--  Scrolling Reveal Script -->
+        <script src="{% static 'js/scrollReveal.js' %}"></script>
+        <!--  Scroll Scripts -->
+        <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+        <!--  Custom Scripts -->
+        <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>

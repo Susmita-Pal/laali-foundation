@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{% static 'js/jquery-1.10.2.js'%}"> </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<style>
+  .center {
+    text-align: center;
+    color: red;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+
+  .wrapper {
+    text-align: center;
+  }
+
+  .button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .styling {
+    text-align: center;
+  }
+
+  .navbar {
+    background: pink;
+  }
+
+  #myChart {
+    margin: 0 auto;
+  }
+</style>
+
+<body class="body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="navbar navbar-default" style="background-color:pink;">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Attendance Portal</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="mentor.html">Profile</a>
+                </li>
+                <li><a href="#">Logout</a>
+                </li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <h2 class="center">Create Attendance for the Session</h2>
+  <br>
+  <div class="wrapper">
+    <button class="button" type="button" class="btn btn-outline-primary" onclick="myFunction()">Click to Activate
+      Attendance</button>
+  </div>
+  <script>
+
+    function myFunction() {
+      alert("Attendance Session has been Created");
+    }
+
+  </script>
+  <div>
+    <br>
+    <br>
+    <h2 class="styling">Student Attendance Status</h2>
+    <canvas id="myChart" aria-label="chart" role="img" width="800" height="600"></canvas>
+    <script src="{% static 'js/mentor-att.js' %}"></script>
+  </div>
+  <br>
+  </br>
+  </br>
+  </br>
+</body>
+
+</html>

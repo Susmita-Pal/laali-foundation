@@ -1,0 +1,101 @@
+body {
+        background: url(images/backg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+ body .overlay{
+    background: rgba(214, 145, 166, 0.89);
+    position:absolute ;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left:0;
+  }
+  body h1 {
+    text-align: center;
+    color: white;
+  }
+  .container {
+    /* display: flex;
+          flex-direction: column; */
+          position: absolute;
+          top: 40vh ;
+          left: 10vw;
+         
+          border-radius: 5px;
+    background-color: #e04f69;
+    width: 20%;
+    margin: 1vw auto;
+    padding: 1vw;
+  }
+  .container input {
+    display: block;
+    width: 75%;
+    margin: 2px 0px 0px 0px;
+    padding: 1vh 1vw;
+    border: 1px solid #dafdff;
+    border-radius: 2px;
+    color: black;
+  }
+  .container0 {
+    /* display: flex;
+          flex-direction: column; */
+           position: absolute;
+          top: 40vh ;
+          left: 40vw; 
+          
+          border-radius: 5px;
+    background-color: #e04f69;
+    width: 20%;
+    margin: 1vw auto;
+    padding: 1vw;
+  }
+  .container0 input {
+    display: block;
+    width: 75%;
+    margin: 2px 0px 0px 0px;
+    padding: 1vh 1vw;
+    border: 1px solid #dafdff;
+    border-radius: 2px;
+    color: black;
+  }
+  .container1 {
+    /* display: flex;
+          flex-direction: column; */
+          position: absolute;
+          top: 40vh ;
+          left: 70vw;
+         
+          border-radius: 5px;
+    background-color: #e04f69;
+    width: 20%;
+    margin: 1vw auto;
+    padding: 1vw;
+  }
+  .container1 input {
+    display: block;
+    width: 75%;
+    margin: 2px 0px 0px 0px;
+    padding: 1vh 1vw;
+    border: 1px solid #dafdff;
+    border-radius: 2px;
+    color: black;
+  }
+  .sub {
+    color: white;
+    background-color: #f37a90;
+   
+    border:solid 2px white;
+    padding: 0.5vw 1.5vw;
+/*    
+    width: 100%;
+    text-align: center; */
+  }
+  .sub:hover {
+    color: #fff;
+    background-color: #e74e6a;
+    border:solid 2px white;
+    
+  
+    cursor: pointer;
+  }

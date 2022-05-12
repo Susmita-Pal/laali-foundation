@@ -1,0 +1,77 @@
+{% block content %}{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{%static 'css/register.css'%}" />
+
+  <title>Registration</title>
+</head>
+
+<body>
+  <section class="overlay">
+  <form method="post">
+    {% csrf_token %}
+    <div class="container">
+      <h1>Registration</h1>
+      <label for="name">First Name:
+        <input type="text" placeholder="Name" name="name" id="name" />
+      </label>
+      <br />
+      <!-- Used a drop-down for designation -->
+      <label for="desg">Designation:
+        <div class="drop-down">
+          <select id="desg" name="desg">
+            <option value="Fellow">Fellow</option>
+            <option value="Mentor">Mentor</option>
+            <option value="program-manager">Program Manager</option>
+          </select>
+        </div>
+      </label>
+      <br />
+      <!-- Sir suggested if email is used to sign up username isn't required -->
+      <label for="uname">Username:
+        <input type="text" placeholder="Username" name="uname" id="uname" />
+      </label>
+      <br />
+      <!-- used a drop-down for designation, would prevent typos -->
+      <label for="gen">Gender:
+        <div class="drop-down">
+          <select id="gen" name="gen">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="non-binary">Non-Binary</option>
+          </select>
+        </div>
+      </label>
+      <br />
+      <label for="email">Email:
+        <input type="email" placeholder="Email" name="email" id="email" />
+      </label>
+      <br />
+      <label for="pwd">Password:
+        <input type="password" placeholder="Password" name="pwd" id="pwd" />
+      </label>
+      <br />
+      <label for="cpwd">Confirm Password:
+        <input type="password" placeholder="Confirm Password" name="cpwd" id="cpwd" />
+      </label>
+      <br />
+      <input type="submit" id="sub" value="Register"/>
+    </div>
+
+  </form>
+  <div>
+    <br />
+    {% for msg in messages %}
+    <h3>{{ msg }}</h3>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
+{% endblock %}
